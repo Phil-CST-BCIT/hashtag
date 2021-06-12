@@ -1,8 +1,8 @@
-# Hashtag, Twitt, People 
+# Hashtag, Tweets, People 
 
 
 **Motivation**  
-Initially I wanted to create a small program to get user information from Twitter. But, after I read [an article](https://blog.hubspot.com/marketing/hashtags-twitter-facebook-instagram) about Twitter hashtags, I changed my mind. If I could create an app to read an user's information and the user's twitts, suppose there was a specific hashtag in the user's twitt I was interested in, and I wanted to know how many times the hashtag was mentioned globally, it could be a very useful tool in the future. As I know, there is no such free tool yet. Maybe I'm wrong. I don't know.  
+Initially I wanted to create a small program to get user information from Twitter. But, after I read [an article](https://blog.hubspot.com/marketing/hashtags-twitter-facebook-instagram) about Twitter hashtags, I changed my mind. If I could create an app to read an user's information and the user's tweets, suppose there was a specific hashtag in the user's tweet I was interested in, and I wanted to know how many times the hashtag was mentioned globally, it could be a very useful tool in the future. As I know, there is no such free tool yet. Maybe I'm wrong. I don't know.  
 
 
 **Project Goals**  

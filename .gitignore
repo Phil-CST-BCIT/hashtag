@@ -1,0 +1,5 @@
+# ignore mod
+*.mod
+
+# ignore txt
+*.txt

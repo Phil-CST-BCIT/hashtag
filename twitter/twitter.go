@@ -1,33 +1,39 @@
+package twitter
+
 import (
-			"net"
-			"io"
-)	
+	"io"
+	"net"
+	"time"
+)
 
 // we want to keep tracking the state of a connection
-var {
-		cnx net.Conn 
+var (
+	cnx net.Conn
 
-		reader 	io.ReadCloser
-	
-	}
+	reader io.ReadCloser
+)
+
+const (
+	TimeoutValue = 3 * time.Second
+)
 
 func dial(network, addr string) (net.Conn, error) {
 
 	if cnx != nil {
 
 		cnx.Close()
-		
+
 		cnx = nil
-	
+
 	}
 
 	// establish a new connection and set timeout 3 sec
-	conn, err := net.DialTimeout(network, addr, 3*time.Second)
+	conn, err := net.DialTimeout(network, addr, TimeoutValue)
 
 	if err != nil {
 
 		return nil, err
-	
+
 	}
 
 	cnx = conn
@@ -36,17 +42,17 @@ func dial(network, addr string) (net.Conn, error) {
 }
 
 func close_cnx() {
-	
+
 	if cnx != nil {
-	
+
 		cnx.Close()
-	
+
 	}
 
 	if reader != nil {
-	
+
 		reader.Close()
-	
+
 	}
 
 }

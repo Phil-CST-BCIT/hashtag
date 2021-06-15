@@ -13,9 +13,7 @@ var (
 	reader io.ReadCloser
 )
 
-const (
-	TimeoutValue = 3 * time.Second
-)
+const TIMEOUT time.Duration = 3 * time.Second
 
 func dial(network, addr string) (net.Conn, error) {
 
@@ -28,7 +26,7 @@ func dial(network, addr string) (net.Conn, error) {
 	}
 
 	// establish a new connection and set timeout 3 sec
-	conn, err := net.DialTimeout(network, addr, TimeoutValue)
+	conn, err := net.DialTimeout(network, addr, TIMEOUT)
 
 	if err != nil {
 
